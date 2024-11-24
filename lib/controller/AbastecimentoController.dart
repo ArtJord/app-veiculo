@@ -8,7 +8,7 @@ class AbastecimentoController {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
-  /// Cadastro de abastecimento
+  
   Future<bool> cadastrarAbastecimento(Abastecimento abastecimento) async {
     try {
       User? usuario = _auth.currentUser;
@@ -19,7 +19,7 @@ class AbastecimentoController {
 
       String idUsuario = usuario.uid;
 
-      // Valida dados antes de salvar
+      
       if (abastecimento.quantidadeLitros <= 0 || abastecimento.km <= 0) {
         print("Erro: Dados de abastecimento inválidos.");
         return false;
@@ -35,20 +35,20 @@ class AbastecimentoController {
         'idVeiculo': abastecimento.veiculo.id,
       };
 
-      // Salva o abastecimento no Firestore
+      
       await abastecimentosRef.add(dadosAbastecimento);
 
-      // Calcula a média de consumo do veículo
+      
       double mediaConsumo = calcularMediaConsumo(abastecimento);
 
-      // Atualiza os dados do veículo
+     
       VeiculoController veiculoController = VeiculoController();
       await veiculoController.atualizarConsumoVeiculo(abastecimento.veiculo, mediaConsumo);
 
-      // Atualiza o KM do veículo
+      
       abastecimento.veiculo.kmAtual = abastecimento.km;
 
-      // Adiciona o abastecimento à lista de abastecimentos do veículo
+      
       abastecimento.veiculo.abastecimentos.add(abastecimento);
 
       return true;
@@ -58,14 +58,14 @@ class AbastecimentoController {
     }
   }
 
-  /// Função auxiliar para calcular a média de consumo do veículo
+  
   double calcularMediaConsumo(Abastecimento abastecimento) {
-    // Evita divisão por zero ou dados inválidos
+    
     if (abastecimento.quantidadeLitros == 0) return 0;
     return (abastecimento.km - abastecimento.veiculo.kmAtual) / abastecimento.quantidadeLitros;
   }
 
-  /// Busca todos os abastecimentos de veículos do usuário
+  
   Future<List<Abastecimento>> buscarAbastecimentosPorUsuario() async {
     try {
       VeiculoController veiculoController = VeiculoController();
