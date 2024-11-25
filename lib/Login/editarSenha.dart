@@ -19,7 +19,7 @@ class EditarSenhaState extends State<EditarSenha>{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.red,
         title: Center(
           child: Text(
             'Alterar Senha',
@@ -54,7 +54,7 @@ class EditarSenhaState extends State<EditarSenha>{
                 labelStyle: TextStyle(color: Colors.black),
                 border: OutlineInputBorder(),
                 focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.blue, width: 2.0),
+                  borderSide: BorderSide(color: Colors.red, width: 2.0),
                 ),
                 contentPadding: EdgeInsets.symmetric(vertical: 18.0, horizontal: 12.0),
               ),
@@ -77,11 +77,11 @@ class EditarSenhaState extends State<EditarSenha>{
                 ),
               ),
 
-            // Botão de enviar link para alteração de senha
+           
             ElevatedButton(
               onPressed: isLoading ? null : sendPasswordResetEmail,
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue,
+                backgroundColor: Colors.red,
                 foregroundColor: Colors.white,
                 minimumSize: Size(200, 50),
                 shape: RoundedRectangleBorder(

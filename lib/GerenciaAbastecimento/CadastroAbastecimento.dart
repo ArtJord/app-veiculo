@@ -61,7 +61,7 @@ class CadastroAbastecimentoState extends State<CadastroAbastecimento>{
                 );
               }).toList(),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 30),
 
             TextField(
               controller: quilometragemController,

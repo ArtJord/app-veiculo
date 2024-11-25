@@ -89,7 +89,7 @@ class TelaPrincipalState extends State<TelaPrincipal> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.red,
         title: Text(
           'Veiculo App',
           style: TextStyle(color: Colors.white),
@@ -104,7 +104,7 @@ class TelaPrincipalState extends State<TelaPrincipal> {
           children: <Widget>[
             DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.blue,
+                color: Colors.red,
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

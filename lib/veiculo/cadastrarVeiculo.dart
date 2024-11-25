@@ -150,7 +150,7 @@ class CadastrarVeiculoState extends State<CadastrarVeiculo>{
                   style: ElevatedButton.styleFrom(
                     padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                     textStyle: const TextStyle(fontSize: 18),
-                    backgroundColor: Colors.blue, 
+                    backgroundColor: Colors.red, 
                   ),
                   onPressed: () => _adicionarVeiculo(context),
                   child: const Text('Adicionar Veículo', style: TextStyle(color: Colors.white),),

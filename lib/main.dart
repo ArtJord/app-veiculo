@@ -22,24 +22,24 @@ class MyApp extends StatelessWidget {
 
   @override
    Widget build(BuildContext context) {
-    return MaterialApp(
+       return MaterialApp(
       title: 'Flutter',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.red, 
       ),
       debugShowCheckedModeBanner: false,
       home: StreamBuilder<User?>(
         stream: FirebaseAuth.instance.authStateChanges(),
-        builder: (context, AsyncSnapshot<User?> snapshot){
-          if(snapshot.hasData && snapshot.data != null){
+        builder: (context, AsyncSnapshot<User?> snapshot) {
+          if (snapshot.hasData && snapshot.data != null) {
             return TelaPrincipal();
-          }else if(snapshot.connectionState == ConnectionState.waiting){
+          } else if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(
               child: CircularProgressIndicator(),
             );
-          }
-          else{
+          } else {
             return Login();
+
           }
         },
       ),

@@ -116,8 +116,8 @@ class UserConfigState extends State<UserConfig> {
                   SizedBox(height: 40),
                   Icon(
                     Icons.account_circle,
-                    size: 120.0,
-                    color: Colors.blue,
+                    size: 100.0,
+                    color: Colors.red,
                   ),
                   SizedBox(height: 40),
                 ],
@@ -161,7 +161,7 @@ class UserConfigState extends State<UserConfig> {
                 Expanded(
                   child: ElevatedButton(
                     onPressed: sendPasswordResetEmail,
-                    style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
+                    style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
                     child: Text(
                       'Alterar Senha',
                       style: TextStyle(color: Colors.white),

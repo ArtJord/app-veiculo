@@ -32,7 +32,7 @@ class VeiculoItem extends StatelessWidget{
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  'Média de Consumo: ${veiculo.mediaConsumo != null ? veiculo.mediaConsumo!.toStringAsFixed(2) : "Indisponível"}',
+                  'Média de Consumo: ${veiculo.mediaConsumo != null ? veiculo.mediaConsumo!.toStringAsFixed(2) : "Indisponivel"}',
                   style: TextStyle(
                     fontSize: 16,
                     color: Colors.black,

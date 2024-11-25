@@ -18,7 +18,7 @@ class LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.red,
         title: Center(
           child: Text(
             'Veiculo App',
@@ -76,14 +76,14 @@ class LoginState extends State<Login> {
                 errorMessage!,
                 style: TextStyle(color: Colors.red),
               ),
-            SizedBox(height: 20.0),
+            SizedBox(height: 10.0),
 
             // Login button
             ElevatedButton(
               onPressed: login,
               style: ElevatedButton.styleFrom(
                 foregroundColor: Colors.white,
-                backgroundColor: Colors.blue,
+                backgroundColor: Colors.red,
                 minimumSize: Size(150, 50),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20.0),
@@ -97,45 +97,49 @@ class LoginState extends State<Login> {
 
             SizedBox(height: 10.0),
 
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                Text('Não tem uma conta?'),
-                TextButton(
+                // "Criar conta" button
+                ElevatedButton(
                   onPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => Cadastro()),
                     );
                   },
-                  child: Text(
-                    'Criar conta',
-                    style: TextStyle(
-                      color: Colors.blue,
-                      fontWeight: FontWeight.bold,
+                  style: ElevatedButton.styleFrom(
+                    foregroundColor: Colors.red,
+                    backgroundColor: Colors.white,
+                    minimumSize: Size(130, 50), // Same size as Login button
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
                     ),
                   ),
+                  child: Text(
+                    'Criar conta',
+                    style: TextStyle(fontSize: 16), // Similar font size
+                  ),
                 ),
-              ],
-            ),
-
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Text('Esqueceu a senha?'),
-                TextButton(
+                // "Alterar senha" button
+                ElevatedButton(
                   onPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => EditarSenha()),
                     );
                   },
+                  style: ElevatedButton.styleFrom(
+                    foregroundColor: Colors.red,
+                    backgroundColor: Colors.white,
+                    minimumSize: Size(130, 50), // Same size as Login button
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
+                  ),
                   child: Text(
                     'Alterar senha',
-                    style: TextStyle(
-                      color: Colors.blue,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: TextStyle(fontSize: 16), // Similar font size
                   ),
                 ),
               ],

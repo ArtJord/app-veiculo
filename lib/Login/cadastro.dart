@@ -22,10 +22,10 @@ class CadastroState extends State<Cadastro>{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.red,
         title: Center(
           child: Text(
-            'Gerenciamento de Veiculos',
+            'Veiculo App',
             style: TextStyle(color: Colors.white),
           ),
         ),
@@ -53,7 +53,7 @@ class CadastroState extends State<Cadastro>{
                 labelStyle: TextStyle(color: Colors.black),
                 border: OutlineInputBorder(),
                 focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.blue, width: 2.0),
+                  borderSide: BorderSide(color: Colors.green, width: 2.0),
                 ),
               ),
             ),
@@ -68,7 +68,7 @@ class CadastroState extends State<Cadastro>{
                 labelStyle: TextStyle(color: Colors.black),
                 border: OutlineInputBorder(),
                 focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.blue, width: 2.0),
+                  borderSide: BorderSide(color: Colors.green, width: 2.0),
                 ),
               ),
             ),
@@ -83,7 +83,7 @@ class CadastroState extends State<Cadastro>{
                 labelStyle: TextStyle(color: Colors.black),
                 border: OutlineInputBorder(),
                 focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.blue, width: 2.0),
+                  borderSide: BorderSide(color: Colors.green, width: 2.0),
                 ),
               ),
             ),
@@ -101,7 +101,7 @@ class CadastroState extends State<Cadastro>{
               onPressed: register,
               style: ElevatedButton.styleFrom(
                 foregroundColor: Colors.white,
-                backgroundColor: Colors.blue,
+                backgroundColor: Colors.red,
                 minimumSize: Size(150, 50),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20.0),
@@ -115,24 +115,7 @@ class CadastroState extends State<Cadastro>{
 
             SizedBox(height: 20.0),
 
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Text('Já tem uma conta?'),
-                TextButton(
-                  onPressed: () {
-                    Navigator.of(context).pop();
-                  },
-                  child: Text(
-                    'Entrar',
-                    style: TextStyle(
-                      color: Colors.blue,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-              ],
-            ),
+            
           ],
         ),
       ),
